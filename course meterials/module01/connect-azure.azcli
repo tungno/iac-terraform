@@ -1,0 +1,32 @@
+
+# Bash script, do it from the terminal on portal dashboard azure
+az ad sp create-for-rbac --name app-tungno --role Contributor --scopes /subscriptions/a686bba0-d6bf-491d-b5e4-bf385cf002db
+
+{
+  "appId": "dda59ddf-f9de-45f2-a26f-2a6dfaf10a5d",
+  "displayName": "app-tungno",
+  "password": "nfZ8Q~YSAAX-NBZXUfO3X_Gt6CwGeRJfCt-.Pdno",
+  "tenant": "8e4c05b5-ec49-45bb-afb1-6b993ddfef42"
+}
+
+
+# login this one from terminal on vscode
+az login --service-principal --username dda59ddf-f9de-45f2-a26f-2a6dfaf10a5d --password nfZ8Q~YSAAX-NBZXUfO3X_Gt6CwGeRJfCt-.Pdno --tenant 8e4c05b5-ec49-45bb-afb1-6b993ddfef42
+
+tungno@Paus-MacBook-Pro iac-terraform % az login --service-principal --username dda59ddf-f9de-45f2-a26f-2a6dfaf10a5d --password nfZ8Q~YSAAX-NBZXUfO3X_Gt6CwGeRJfCt-.Pdno --tenant 8e4c05b5-ec49-45bb-afb1-6b993ddfef42
+[
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "8e4c05b5-ec49-45bb-afb1-6b993ddfef42",
+    "id": "a686bba0-d6bf-491d-b5e4-bf385cf002db",
+    "isDefault": true,
+    "managedByTenants": [],
+    "name": "Azure subscription 1",
+    "state": "Enabled",
+    "tenantId": "8e4c05b5-ec49-45bb-afb1-6b993ddfef42",
+    "user": {
+      "name": "dda59ddf-f9de-45f2-a26f-2a6dfaf10a5d",
+      "type": "servicePrincipal"
+    }
+  }
+]

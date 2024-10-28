@@ -1,31 +1,45 @@
 MAC OS
 
+1. 
 Installer Homebrew:
 https://brew.sh/ (The Missing Package Manager for macOS (or Linux))
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
+brew --version 
 
+2. 
 Installer VS Code med Brew: brew install --cask visual-studio-code
 Oppdater VS Code med Brew: brew upgrade visual-studio-code
+code --version
 
+3.
 Installer PowerShell med Brew: brew install --cask powershell
 Oppgrader PowerShell med Brew: brew upgrade powershell --cask
+pwsh --version 
 
+4. 
 Installer Azure CLI med Brew: brew update && brew install azure-cli
 Oppgrader Azure CLI med Brew: brew update && brew upgrade azure-cli
+az --version 
 
+5.
 Terraform
 https://github.com/hashicorp/homebrew-tap 
 https://docs.brew.sh/Taps
-Installer HashiCorp Tap med Brew: Brew tap HashiCorp/Tap
+Installer HashiCorp Tap med Brew: brew tap HashiCorp/Tap
 Installer Terraform med Brew: brew install hashicorp/tap/terraform
 Installer Terraform med Brew: brew update && brew upgrade terraform
+terrafrom --version 
 
+6.
+Install Extention: from VS Code: ⇒ click on the EXTENSIONS button: 
 Extentions:
 - HashiCorp Terraform
 - PowerShell
 - Azure CLI
 - Rainbow CSV
+
+
 
 
 WINDOWS
