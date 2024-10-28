@@ -1,0 +1,6 @@
+location = "West Europe"
+rgname   = "rg-demo-001"
+saname   = "satungnodemo1765"
+company = "ABB"
+project = "DeployWeb"
+billing_code = "ID2345DC"

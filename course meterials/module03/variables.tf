@@ -8,7 +8,7 @@ variable "location" {
 variable "rgname" {
   type        = string
   description = "Resource Groupe Name"
-  default     = "rg-demo-terraform"
+  default     = "rg-name"
 }
 
 variable "saname" {
@@ -49,6 +49,6 @@ variable "vmsize" {
 variable "storage_account_names" {
   type        = list(string)
   description = "values for storage account names"
-  default = [ "storage123", "storage456"]
+  default     = ["storage123tn", "storage456tn"]
 }
 

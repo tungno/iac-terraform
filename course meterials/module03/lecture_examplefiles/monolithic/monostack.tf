@@ -11,6 +11,7 @@ terraform {
 }
 
 provider "azurerm" {
+  subscription_id = "a686bba0-d6bf-491d-b5e4-bf385cf002db"
   features {}
 }
 
@@ -107,11 +108,11 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
               # Create a simple Node.js application
               mkdir /app
-              cat <<EOT > /app/app.js
+              cat <<'EOT' > /app/app.js
               const express = require('express');
               const mysql = require('mysql');
               const app = express();
-              const port = 3000;
+              const port = 80;
 
               const connection = mysql.createConnection({
                 host: 'localhost',
@@ -130,7 +131,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
               });
 
               app.listen(port, () => {
-                console.log(`App listening at http://localhost:${port}`);
+                console.log('App listening at http://localhost:' + port);
               });
               EOT
 
@@ -147,6 +148,8 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
               EOF
   )
+
+
 }
 
 # Nettverkssikkerhetsgruppe
@@ -174,7 +177,7 @@ resource "azurerm_network_security_group" "nsg" {
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "3000"
+    destination_port_range     = "80"
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }

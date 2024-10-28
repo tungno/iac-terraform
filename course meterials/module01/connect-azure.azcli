@@ -30,3 +30,9 @@ tungno@Paus-MacBook-Pro iac-terraform % az login --service-principal --username 
     }
   }
 ]
+
+# For auth
+export ARM_CLIENT_ID="dda59ddf-f9de-45f2-a26f-2a6dfaf10a5d"
+export ARM_CLIENT_SECRET="nfZ8Q~YSAAX-NBZXUfO3X_Gt6CwGeRJfCt-.Pdno"
+export ARM_TENANT_ID="8e4c05b5-ec49-45bb-afb1-6b993ddfef42"
+export ARM_SUBSCRIPTION_ID="a686bba0-d6bf-491d-b5e4-bf385cf002db"

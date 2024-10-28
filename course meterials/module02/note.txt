@@ -1,0 +1,16 @@
+if we didnot provide the variable default name, we can provide at the terminal 
+fo example:
+terraform plan -var=”rgname=rg-tn-var-01” -var=”saname=satn123456tn”
+
+or 
+
+just write terraform plan: and it will ask the value for rg name
+
+the problem is that, we have to rewrite the saname when we make terraform apply: enter a value for saname 
+
+we can deploy with the following commands: 
+terraform init
+terraform fmt
+terraform validate
+terraform plan -out="main.tfplan"
+terraform apply "main.tfplan"
