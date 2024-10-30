@@ -7,7 +7,7 @@ variable "saname" {
 variable "mssqlname" {
   description = "The name of the SQL database"
   type        = string
-  default     = "mssqldb001"
+  default     = "mssqlsv001"
 }
 
 variable "mssqldbname" {
@@ -25,6 +25,6 @@ variable "rgname" {
 variable "location" {
   description = "The location/region of the resource group"
   type        = string
-  default     = "westeurope"
+  default     = "eastus"
 
 }

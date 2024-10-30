@@ -1,23 +1,26 @@
 
-resource "azurerm_windows_virtual_machine_scale_set" "vmss" {
+resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
   name                 = var.vmssname
   resource_group_name  = var.rgname
   location             = var.location
   sku                  = "Standard_F2"
   instances            = 2
-  admin_password       = "tfP@55w0rd1234!"
   admin_username       = "tfadminuser"
-  computer_name_prefix = "vm-"
+
+  admin_ssh_key {
+    username   = "tfadminuser"
+    public_key = file("~/.ssh/id_rsa.pub")
+  }
 
   source_image_reference {
-    publisher = "MicrosoftWindowsServer"
-    offer     = "WindowsServer"
-    sku       = "2016-Datacenter-Server-Core"
+    publisher = "Canonical"
+    offer     = "0001-com-ubuntu-server-jammy"
+    sku       = "22_04-lts"
     version   = "latest"
   }
 
   os_disk {
-    storage_account_type = "Standard_LRS"
+    storage_account_type = "StandardSSD_ZRS"
     caching              = "ReadWrite"
   }
 

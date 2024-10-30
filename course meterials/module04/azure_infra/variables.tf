@@ -39,7 +39,7 @@ variable "saname" {
 variable "mssqlname" {
   description = "The name of the SQL database"
   type        = string
-  default     = "mssqldb001"
+  default     = "mssqlsv001"
 }
 
 variable "mssqldbname" {
