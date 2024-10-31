@@ -2,15 +2,15 @@ terraform {
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
-      version = "3.73.0"
+      version = "4.7.0"
     }
   }
 
     backend "azurerm" {
-    resource_group_name  = "rg-backend-tfstate"
-    storage_account_name = "sabetfs3a9npz46p2"
-    container_name       = "tfstate"
-    key                  = "rg.terraform.tfstate"
+    resource_group_name  = "rg-backend-tn"
+    storage_account_name = "sabetnnj09n"
+    container_name       = "sasctn"
+    key                  = "rg.terraform.sasctn"
   }
 }
 

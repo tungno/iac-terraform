@@ -1,0 +1,9 @@
+terraform workspace list
+ 
+ terraform workspace new dev
+ terraform workspace new stage 
+ terraform workspace new prod
+
+terraform workspace select dev 
+
+use backend rg 
